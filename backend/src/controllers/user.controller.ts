@@ -14,6 +14,7 @@ export const createUser = async (
     const existing = await prisma.user.findUnique({ where: { email } });
     if (existing) return next(new AppError("Email already exists", 400));
 
+    
     const user = await prisma.user.create({
       data: {
         name,

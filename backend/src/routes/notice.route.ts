@@ -9,4 +9,5 @@ const router = Router();
 router.get("/", getNotices);
 router.post("/", validate(createNoticeSchema), createNotice);
 
+
 export default router;
